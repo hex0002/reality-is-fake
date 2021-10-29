@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono";
+    font-size: 1em;
+}
+
+:root {
+    --col1: #6155A6;
+    --col2: #A685E2;
+    --col3: #FFABE1;
+    --col4: #FFE6E6;
+}
+
+body section {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--col1);
+}
+
+.p1 {
+    border: 10px solid var(--col3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window {
+    width: 400px;
+    height: 500px;
+    background-color: var(--col2);
+    border-left: 3px solid var(--col4);
+    border-right: 3px solid var(--col4);
+    border-bottom: 3px solid var(--col4);
+}
+
+.window::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 30px;
+    transform-origin: left;
+    transform: translateX(-3px);
+    background-color: var(--col3);
+}
+
+.btns {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--col4);
+    transform: translateX(370px) translateY(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--col1);
+}
+
+.btns::before, .btns::after {
+    content: "-";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--col4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--col1);
+    font-size: .8em;
+}
+
+.btns::after {
+    content: "x";
+}
+
+.btns::before {
+    transform: translateX(-20px);
+}
+
+.btns {
+    background-color: transparent;
+}
+
+.wcontent {
+    width: 400px;
+    height: 500px;
+    transform-origin: left;
+    transform: translateX(-3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wcbottom {
+    position: absolute;
+    display: flex;
+    transform-origin: top;
+    transform: translateY(180px);
+}
+
+.txtbox {
+    width: 100px;
+    height: 50px;
+    background-color: var(--col4);
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--col1);
+}
+
+.txtbox:hover {
+    background-color: transparent;
+    color: transparent;
+}
+
+.txtbox:hover::before {
+    border: none;
+}
+
+.txtbox::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    border: 3px solid var(--col4);
+    transform: translateX(8px) translateY(8px);
+    z-index: -1;
+}
+
+.wctop {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    transform: translateY(-20px);
+    border: 3px solid var(--col4);
+    background: url("img/gf1.gif") center no-repeat;
+    background-size: cover;
+    background-position-x: 0px;
+}
+
+.p2 {
+    background-color: var(--col3);
+    height: 20vh;
+}
+
+.p2container {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid var(--col4);
+}
+
+.p2container p {
+    margin: 10px 0;
+    color: black;
+    font-size: 1.2em;
+}
+
+.p3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    animation: bgchange 2s ease-in-out infinite;
+}
+
+.window2 {
+    position: absolute;
+    transform: translateX(-200px) translateY(-200px);
+    width: 200px;
+    height: 150px;
+    background-color: var(--col2);
+    border-left: 3px solid var(--col4);
+    border-right: 3px solid var(--col4);
+    border-bottom: 3px solid var(--col4);
+}
+
+.window2::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    transform-origin: left;
+    transform: translateX(-3px);
+    background-color: var(--col3);
+}
+
+.btns2 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--col4);
+    transform: translateX(175px) translateY(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--col1);
+}
+
+.btns2::before, .btns2::after {
+    content: "-";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--col4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--col1);
+    font-size: .8em;
+}
+
+.btns2::after {
+    content: "x";
+}
+
+.btns2::before {
+    transform: translateX(-20px);
+}
+
+.btns2 {
+    background-color: transparent;
+}
+
+.wcontent2 {
+    width: 200px;
+    height: 150px;
+    transform-origin: left;
+    transform: translateX(-3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wcontent2 p {
+    color: var(--col4);
+    font-size: 1.6em;
+}
+
+@keyframes bgchange {
+    0% {
+
+    }
+    25% {
+        background: url("img/face.gif") center no-repeat;
+        background-size: cover;
+    }
+    50% {
+        background: url("img/frog.gif") center no-repeat;
+        background-size: cover;
+    }
+    75% {
+        background: url("img/grain.gif") center no-repeat;
+        background-size: cover;
+    }
+    100% {
+        background: url("img/face2.gif") center no-repeat;
+        background-size: cover;
+    }
+}
+
+.p4 {
+    height: 20vh;
+    background-color: var(--col1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.txtbox2 {
+    width: 100px;
+    height: 50px;
+    background-color: var(--col4);
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--col1);
+}
+
+.txtbox2:hover {
+    background-color: transparent;
+    color: transparent;
+}
+
+.txtbox2:hover::before {
+    border: none;
+}
+
+.txtbox2::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    border: 3px solid var(--col4);
+    transform: translateX(8px) translateY(8px);
+}
